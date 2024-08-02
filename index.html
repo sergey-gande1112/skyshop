@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+            background-size: 600% 600%;
+            color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            animation: gradientBackground 15s ease infinite;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            background-image: url('logo.jpg'); /* Укажите путь к вашему изображению */
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            color: #ffffff;
+            animation: fadeIn 2.5s ease forwards;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            color: #dcdcdc;
+            animation: fadeIn 3s ease forwards;
+        }
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            width: 100%;
+            animation: fadeIn 3.5s ease forwards;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: background 0.3s, transform 0.3s;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.5s;
+        }
+
+        a:hover::before {
+            left: 100%;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <h1>Sky Shop</h1>
+        <p>Актуальные ссылки на все ресурсы</p>
+        <div class="link-container">
+            <a href="https://sergey-gande1112.github.io/inst/">Инструкции (обучение)</a>
+            <a href="https://sergey-gande1112.github.io/promo/">Все промокоды</a>
+            <a href="https://t.me/SkyRuShop_Bot">Магазин</a>
+            <a href="https://t.me/SkyProbiv_Bot">Пробив</a>
+            <a href="https://t.me/SkyRepChanel">Отзывы</a>
+            <a href="https://t.me/BQSmm_Bot">СММ бот</a>
+        </div>
+    </div>
+</body>
+</html>
