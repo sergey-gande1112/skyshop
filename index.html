@@ -82,8 +82,8 @@
         .container {
             text-align: center;
             width: 90%;
-            max-width: 360px;
-            padding: 20px;
+            max-width: 340px; /* Уменьшено для лучшего соответствия мобильным экранам */
+            padding: 15px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
@@ -109,8 +109,8 @@
         }
 
         .logo {
-            width: 90px;
-            height: 90px;
+            width: 80px; /* Уменьшен размер для мобильных экранов */
+            height: 80px;
             background-image: url('logo.jpg'); /* Укажите путь к вашему изображению */
             background-size: cover;
             background-position: center;
@@ -125,7 +125,7 @@
             font-family: 'Poppins', sans-serif;
             margin-top: 10px;
             margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 1.6em; /* Уменьшен размер шрифта для мобильных экранов */
             letter-spacing: 1.5px;
             color: #ffffff;
             animation: slideIn 1.5s ease forwards;
@@ -133,8 +133,8 @@
         }
 
         p {
-            margin-bottom: 30px;
-            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-size: 0.8em; /* Уменьшен размер шрифта для мобильных экранов */
             color: #dcdcdc;
             line-height: 1.6;
             animation: slideIn 2s ease forwards;
@@ -155,12 +155,12 @@
             text-decoration: none;
             color: white;
             font-weight: bold;
-            padding: 15px 20px;
+            padding: 12px 18px; /* Уменьшены отступы для кнопок */
             border-radius: 30px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
-            max-width: 300px;
+            max-width: 280px; /* Уменьшен максимальный размер кнопок */
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -209,33 +209,6 @@
             border-radius: 50%;
             opacity: 0;
             animation: float 10s linear infinite;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                width: 90%;
-                padding: 15px;
-                margin: 10px;
-            }
-
-            h1 {
-                font-size: 1.6em;
-            }
-
-            p {
-                font-size: 0.8em;
-            }
-
-            a {
-                padding: 12px 20px;
-                font-size: 0.9em;
-                max-width: 100%;
-            }
-
-            .logo {
-                width: 80px;
-                height: 80px;
-            }
         }
     </style>
 </head>
