@@ -82,10 +82,10 @@
         .container {
             text-align: center;
             width: 90%;
-            max-width: 340px; /* Уменьшено для лучшего соответствия мобильным экранам */
-            padding: 15px;
+            max-width: 340px; /* Близкий к исходному размеру */
+            padding: 20px; /* Увеличенный padding для удобства на мобильных экранах */
             background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
+            border-radius: 20px; /* Сохраняем радиус скругления */
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -109,14 +109,14 @@
         }
 
         .logo {
-            width: 80px; /* Уменьшен размер для мобильных экранов */
+            width: 80px; /* Близкий к исходному размеру */
             height: 80px;
             background-image: url('logo.jpg'); /* Укажите путь к вашему изображению */
             background-size: cover;
             background-position: center;
             border-radius: 50%;
             margin: 0 auto 20px;
-            border: 5px solid #fff;
+            border: 4px solid #fff;
             animation: bounce 2s ease infinite;
             z-index: 1;
         }
@@ -124,8 +124,8 @@
         h1 {
             font-family: 'Poppins', sans-serif;
             margin-top: 10px;
-            margin-bottom: 20px;
-            font-size: 1.6em; /* Уменьшен размер шрифта для мобильных экранов */
+            margin-bottom: 15px; /* Немного уменьшен отступ */
+            font-size: 1.8em; /* Чуть меньше для мобильных экранов */
             letter-spacing: 1.5px;
             color: #ffffff;
             animation: slideIn 1.5s ease forwards;
@@ -134,7 +134,7 @@
 
         p {
             margin-bottom: 20px;
-            font-size: 0.8em; /* Уменьшен размер шрифта для мобильных экранов */
+            font-size: 1em; /* Чуть меньше для мобильных экранов */
             color: #dcdcdc;
             line-height: 1.6;
             animation: slideIn 2s ease forwards;
@@ -144,7 +144,7 @@
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 15px; /* Сохранен интервал между ссылками */
             align-items: center;
             width: 100%;
             animation: slideIn 2.5s ease forwards;
@@ -155,12 +155,12 @@
             text-decoration: none;
             color: white;
             font-weight: bold;
-            padding: 12px 18px; /* Уменьшены отступы для кнопок */
-            border-radius: 30px;
+            padding: 15px 20px; /* Немного увеличены отступы для удобства */
+            border-radius: 30px; /* Оставляем радиус скругления как в исходном коде */
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
-            max-width: 280px; /* Уменьшен максимальный размер кнопок */
+            max-width: 300px; /* Немного уменьшен максимальный размер кнопок */
             text-align: center;
             position: relative;
             overflow: hidden;
