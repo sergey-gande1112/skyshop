@@ -137,9 +137,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             var links = document.querySelectorAll('.link-container a');
             links.forEach(function(link) {
+                // Добавляем атрибут data-url для хранения реального URL
+                var url = link.getAttribute('href');
+                link.setAttribute('data-url', url);
+                link.removeAttribute('href');
+                
                 link.addEventListener('click', function(event) {
                     event.preventDefault(); // Предотвращаем стандартное поведение ссылки
-                    var href = link.getAttribute('href');
+                    var href = link.getAttribute('data-url');
                     window.location.href = href; // Перенаправляем на ссылку
                 });
             });
