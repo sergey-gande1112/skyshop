@@ -71,10 +71,10 @@
             height: 100%;
             overflow: hidden;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #FF512F, #DD2476);
+            background: linear-gradient(135deg, #1F1C2C, #928DAB);
             background-size: 400% 400%;
             animation: gradientBackground 15s ease infinite;
-            color: #ffffff;
+            color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -89,25 +89,25 @@
             align-items: center;
             padding: 20px;
             box-sizing: border-box;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             animation: fadeIn 2s ease forwards;
             position: relative;
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background-image: url('logo.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 50%;
             margin-bottom: 20px;
-            border: 5px solid #fff;
+            border: 4px solid #fff;
             animation: bounce 2s ease infinite;
             z-index: 1;
         }
@@ -117,7 +117,7 @@
             margin-top: 10px;
             margin-bottom: 20px;
             font-size: 2.5em;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: #ffffff;
             animation: slideIn 1.5s ease forwards;
             z-index: 1;
@@ -125,9 +125,9 @@
         }
 
         p {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-size: 1.2em;
-            color: #f0f0f0;
+            color: #dcdcdc;
             line-height: 1.6;
             animation: slideIn 2s ease forwards;
             z-index: 1;
@@ -137,7 +137,7 @@
         .link-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             align-items: center;
             width: 100%;
             animation: slideIn 2.5s ease forwards;
@@ -150,7 +150,7 @@
             font-weight: bold;
             padding: 15px 20px;
             border-radius: 30px;
-            background: linear-gradient(135deg, #6DD5FA, #2980B9);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
             max-width: 300px;
@@ -158,7 +158,7 @@
             position: relative;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
@@ -178,8 +178,8 @@
         }
 
         a:hover {
-            transform: scale(1.08);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
         }
 
         .particles {
@@ -197,7 +197,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             opacity: 0;
             animation: float 10s linear infinite;
