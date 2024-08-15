@@ -71,7 +71,7 @@
             height: 100%;
             overflow: hidden;
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #141E30, #243B55);
+            background: linear-gradient(135deg, #1F1C2C, #928DAB);
             background-size: 400% 400%;
             animation: gradientBackground 15s ease infinite;
             color: #f0f0f0;
@@ -82,40 +82,31 @@
 
         .container {
             width: 100%;
-            max-width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
+            box-sizing: border-box;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
             animation: fadeIn 2s ease forwards;
             position: relative;
-            box-sizing: border-box;
-        }
-
-        .container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
-            border-radius: 20px;
-            z-index: 0;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             background-image: url('logo.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
             border: 4px solid #fff;
             animation: bounce 2s ease infinite;
             z-index: 1;
@@ -125,20 +116,22 @@
             font-family: 'Poppins', sans-serif;
             margin-top: 10px;
             margin-bottom: 20px;
-            font-size: 1.8em;
+            font-size: 2.5em;
             letter-spacing: 1.5px;
             color: #ffffff;
             animation: slideIn 1.5s ease forwards;
             z-index: 1;
+            text-align: center;
         }
 
         p {
             margin-bottom: 25px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             color: #dcdcdc;
             line-height: 1.6;
             animation: slideIn 2s ease forwards;
             z-index: 1;
+            text-align: center;
         }
 
         .link-container {
@@ -157,7 +150,7 @@
             font-weight: bold;
             padding: 15px 20px;
             border-radius: 30px;
-            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
             max-width: 300px;
@@ -213,17 +206,23 @@
         /* Оптимизация для мобильных устройств */
         @media screen and (max-width: 768px) {
             .container {
-                max-width: 90%;
-                padding: 15px;
+                border-radius: 0;
+                padding: 10px;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 15px;
             }
 
             h1 {
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
             p {
-                font-size: 1em;
-                margin-bottom: 15px;
+                font-size: 1.1em;
+                margin-bottom: 20px;
             }
 
             a {
