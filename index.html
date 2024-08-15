@@ -63,37 +63,37 @@
             }
         }
 
-        body {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            background-size: 400% 400%;
-            color: #f0f0f0;
-            font-family: 'Roboto', sans-serif;
+        /* Общие стили для всего экрана */
+        html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
-            animation: gradientBackground 10s ease infinite;
-            position: relative;
         }
 
         .container {
-            text-align: center;
-            width: 90%;
+            width: 100%;
             max-width: 400px;
-            padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-sizing: border-box;
-            position: relative;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
             animation: fadeIn 2s ease forwards;
-            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
         }
 
         .container::before {
@@ -103,14 +103,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%);
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%);
             border-radius: 20px;
             z-index: 0;
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background-image: url('logo.jpg');
             background-size: cover;
             background-position: center;
@@ -124,8 +124,8 @@
         h1 {
             font-family: 'Poppins', sans-serif;
             margin-top: 10px;
-            margin-bottom: 15px;
-            font-size: 2em;
+            margin-bottom: 20px;
+            font-size: 1.8em;
             letter-spacing: 1.5px;
             color: #ffffff;
             animation: slideIn 1.5s ease forwards;
@@ -134,7 +134,7 @@
 
         p {
             margin-bottom: 25px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #dcdcdc;
             line-height: 1.6;
             animation: slideIn 2s ease forwards;
@@ -157,7 +157,7 @@
             font-weight: bold;
             padding: 15px 20px;
             border-radius: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             width: 100%;
             max-width: 300px;
@@ -198,7 +198,6 @@
             pointer-events: none;
             overflow: hidden;
             z-index: 0;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
         }
 
         .particle {
@@ -213,30 +212,18 @@
 
         /* Оптимизация для мобильных устройств */
         @media screen and (max-width: 768px) {
-            body, html {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
             .container {
-                max-width: 100%;
-                height: 100%;
-                padding: 20px;
-                box-sizing: border-box;
+                max-width: 90%;
+                padding: 15px;
             }
 
             h1 {
-                font-size: 1.6em;
+                font-size: 1.5em;
             }
 
             p {
                 font-size: 1em;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
 
             a {
@@ -259,7 +246,7 @@
             <a data-url="https://t.me/SkyProbivBot">Пробив</a>
             <a data-url="https://t.me/SkyRepChanel">Отзывы</a>
             <a data-url="https://t.me/BQSmm_Bot">СММ бот</a>
-            <a data-url="https://t.me/SkySmsShop_Bot">Смс бот</a> <!-- Новая кнопка -->
+            <a data-url="https://t.me/SkySmsShop_Bot">Смс бот</a>
         </div>
     </div>
     <script>
