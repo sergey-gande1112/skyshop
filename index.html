@@ -10,12 +10,11 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -35,220 +34,135 @@
             list-style-type: none;
         }
 
-        /* Глобальные анимации */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideInUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-
         /* Стили заголовка */
         .header {
             background-color: #ffffff;
             color: #333;
-            padding: 10px 5%;
+            padding: 20px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
             z-index: 1000;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            animation: fadeIn 1s ease;
         }
 
         .header-logo {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
-            color: #4f46e5;
+            color: #000000;
             letter-spacing: 1px;
-            animation: pulse 2s infinite;
         }
 
         .header nav ul {
             display: flex;
-            gap: 15px;
-            animation: slideInUp 1s ease;
+            gap: 20px;
         }
 
         .header nav ul li a {
             color: #333;
             font-weight: 500;
-            padding: 6px 10px;
+            padding: 10px 15px;
             border-radius: 4px;
-            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-            position: relative;
-            font-size: 14px;
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
         .header nav ul li a:hover {
-            background-color: #4f46e5;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        .header nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: #4f46e5;
-            left: 50%;
-            bottom: -4px;
-            transition: width 0.3s ease, left 0.3s ease;
-        }
-
-        .header nav ul li a:hover::after {
-            width: 100%;
-            left: 0;
+            background-color: #f1f1f1;
+            color: #000000;
         }
 
         /* Основная секция */
         .main-section {
-            background: linear-gradient(135deg, #4f46e5, #3b82f6);
-            color: #ffffff;
-            padding: 60px 5%;
+            background-color: #ffffff;
+            color: #333;
+            padding: 100px 5% 60px; /* Поднимаем содержимое для учета фиксированного меню */
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 50vh;
+            min-height: 60vh;
             position: relative;
             overflow: hidden;
-            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
         }
 
         .main-section h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
+            font-size: 48px;
+            margin-bottom: 20px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            animation: slideInUp 1s ease-out;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .main-section p {
-            font-size: 16px;
-            margin-bottom: 20px;
-            animation: slideInUp 1.5s ease-out;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #666666;
         }
 
         .cta-button {
-            background-color: #10b981;
+            background-color: #ff4c4c;
             color: #ffffff;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: slideInUp 2s ease-out;
         }
 
         .cta-button:hover {
-            background-color: #059669;
-            transform: translateY(-5px);
-        }
-
-        .main-section::after {
-            content: '';
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
-            border-radius: 50%;
-            z-index: 0;
-            animation: pulse 5s infinite;
-            top: -75px;
-            right: -75px;
+            background-color: #e03e3e;
+            transform: translateY(-3px);
         }
 
         /* Секция с преимуществами */
         .features-section {
-            padding: 40px 5%;
-            background-color: #ffffff;
-            text-align: center;
+            padding: 60px 5%;
+            background-color: #f8f9fa;
+            text-align: left;
             display: flex;
             flex-direction: column;
             align-items: center;
-            animation: fadeIn 1.5s ease;
         }
 
         .features-section h2 {
-            font-size: 28px;
-            color: #1f2937;
-            margin-bottom: 40px;
-            position: relative;
-            animation: slideInUp 1s ease;
-        }
-
-        .features-section h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #4f46e5;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -15px;
-            animation: slideInUp 1.5s ease;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
         }
 
         .features-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
             gap: 20px;
-            max-width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            animation: fadeIn 2s ease-in-out;
         }
 
         .feature-item {
-            background-color: #f3f4f6;
+            background-color: #ffffff;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            flex: 1 1 calc(100% - 20px);
+            flex: 1 1 calc(25% - 40px);
+            max-width: 300px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            animation: slideInUp 1.5s ease;
-            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .feature-item h3 {
             font-size: 20px;
-            color: #1f2937;
+            color: #333;
             margin-bottom: 10px;
-            animation: fadeIn 1.5s ease;
         }
 
-        .feature-item::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background-color: #4f46e5;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: fadeIn 2s ease;
+        .feature-item p {
+            font-size: 14px;
+            color: #666666;
         }
 
         .feature-item:hover {
@@ -256,170 +170,112 @@
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
+        .feature-item .icon {
+            font-size: 40px;
+            color: #ff4c4c;
+            margin-bottom: 10px;
+        }
+
         /* Секция FAQ */
         .faq-section {
-            padding: 40px 5%;
-            background-color: #f9fafb;
-            text-align: center;
-            animation: fadeIn 2s ease;
+            padding: 60px 5%;
+            background-color: #ffffff;
+            text-align: left;
         }
 
         .faq-section h2 {
-            font-size: 28px;
-            color: #1f2937;
-            margin-bottom: 40px;
-            position: relative;
-            animation: slideInUp 1s ease;
-        }
-
-        .faq-section h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #4f46e5;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -15px;
-            animation: slideInUp 1.5s ease;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
         }
 
         .faq-item {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-            max-width: 100%;
-            margin: 0 auto;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            position: relative;
-            animation: slideInUp 1.5s ease;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
         }
 
         .faq-item h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #1f2937;
-            animation: fadeIn 1.5s ease;
+            font-size: 20px;
+            color: #333;
+            margin: 0;
         }
 
-        .faq-item a {
-            color: #3b82f6;
-            transition: color 0.3s ease;
-            animation: fadeIn 1.5s ease;
+        .faq-item:hover h3 {
+            color: #ff4c4c;
         }
 
-        .faq-item a:hover {
-            color: #1d4ed8;
+        .faq-item::after {
+            content: '+';
+            font-size: 24px;
+            color: #ff4c4c;
+            transition: transform 0.3s ease;
         }
 
-        .faq-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .faq-item::before {
-            content: '';
-            position: absolute;
-            width: 5px;
-            height: 100%;
-            background-color: #4f46e5;
-            left: 0;
-            top: 0;
-            animation: fadeIn 2s ease;
+        .faq-item:hover::after {
+            transform: rotate(90deg);
         }
 
         /* Модуль контактной информации */
         .contact-section {
-            padding: 40px 5%;
-            background-color: #1f2937;
-            color: #ffffff;
+            padding: 60px 5%;
+            background-color: #f8f9fa;
+            color: #333;
             text-align: center;
-            animation: fadeIn 2s ease;
         }
 
         .contact-section h2 {
-            font-size: 28px;
+            font-size: 36px;
             margin-bottom: 20px;
-            position: relative;
-            animation: slideInUp 1s ease;
-        }
-
-        .contact-section h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #3b82f6;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -15px;
-            animation: slideInUp 1.5s ease;
         }
 
         .contact-section p {
-            font-size: 16px;
-            margin-bottom: 30px;
-            animation: fadeIn 1.5s ease;
+            font-size: 18px;
+            margin-bottom: 40px;
         }
 
         .contact-button {
-            background-color: #3b82f6;
+            background-color: #ff4c4c;
             color: #ffffff;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: slideInUp 2s ease;
         }
 
         .contact-button:hover {
-            background-color: #2563eb;
+            background-color: #e03e3e;
             transform: translateY(-3px);
         }
 
         /* Футер */
         .footer {
-            background-color: #111827;
-            color: #9ca3af;
-            padding: 20px 5%;
+            background-color: #333;
+            color: #ffffff;
+            padding: 40px 5%;
             text-align: center;
-            animation: fadeIn 2s ease;
         }
 
         .footer a {
-            color: #9ca3af;
-            margin: 0 10px;
+            color: #ffffff;
+            margin: 0 15px;
             transition: color 0.3s ease, transform 0.3s ease;
-            animation: fadeIn 2s ease;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .footer a:hover {
-            color: #ffffff;
+            color: #ff4c4c;
             transform: translateY(-2px);
-        }
-
-        .footer::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #4f46e5;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 10px;
-            animation: fadeIn 2s ease;
         }
 
         @media (max-width: 768px) {
             .header {
+                padding: 15px 5%;
                 flex-direction: column;
-                text-align: center;
-                padding: 10px 5%;
             }
 
             .header nav ul {
@@ -427,12 +283,29 @@
                 gap: 10px;
             }
 
+            .main-section {
+                padding: 80px 5% 40px;
+            }
+
             .features-grid {
                 flex-direction: column;
+                gap: 30px;
             }
 
             .feature-item {
                 max-width: 100%;
+            }
+
+            .faq-item h3 {
+                font-size: 18px;
+            }
+
+            .faq-section h2, .features-section h2, .contact-section h2 {
+                font-size: 28px;
+            }
+
+            .footer a {
+                font-size: 14px;
             }
         }
 
@@ -464,16 +337,24 @@
         <h2>Sky Shop – это</h2>
         <div class="features-grid">
             <div class="feature-item">
+                <div class="icon">🔑</div>
                 <h3>Только качественные товары</h3>
+                <p>И никаких пиратских копий</p>
             </div>
             <div class="feature-item">
+                <div class="icon">⚡</div>
+                <h3>Быстрая активация</h3>
+                <p>После оплаты вам не придется долго ждать. 30 минут и всё готово!</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">💬</div>
                 <h3>Квалифицированная поддержка</h3>
+                <p>Готовы помочь с любым вопросом!</p>
             </div>
             <div class="feature-item">
-                <h3>Наилучшее соотношение цены</h3>
-            </div>
-            <div class="feature-item">
-                <h3>Приятный в использовании сервис</h3>
+                <div class="icon">🔒</div>
+                <h3>Гарантия на весь срок</h3>
+                <p>Подписка не работает, хотя срок не окончен? Напишите нам – мы восстановим её.</p>
             </div>
         </div>
     </section>
@@ -483,15 +364,15 @@
         <h2>Часто задаваемые вопросы</h2>
         <div class="faq-item">
             <h3>Как пополнить баланс в боте и сделать покупку.</h3>
-            <a href="https://teletype.in/@oneinskyr/vlUKKAVRIwO">Читать инструкцию</a>
         </div>
         <div class="faq-item">
             <h3>Как пригласить друга и получать % с его покупок.</h3>
-            <a href="https://telegra.ph/Referalnaya-sistema-02-29">Читать инструкцию</a>
         </div>
         <div class="faq-item">
             <h3>SMS-сервисы и как ими пользоваться.</h3>
-            <a href="https://teletype.in/@oneinskyr/XpJXTMvLmVQ">Читать инструкцию</a>
+        </div>
+        <div class="faq-item">
+            <h3>Я не из России. Могу ли я оплатить подписку?</h3>
         </div>
     </section>
 
