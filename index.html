@@ -34,42 +34,6 @@
             list-style-type: none;
         }
 
-        /* Стили заголовка */
-        .header {
-            background-color: #ffffff;
-            color: #333;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #000000;
-            letter-spacing: 1px;
-        }
-
-        .header nav ul {
-            display: flex;
-            gap: 20px;
-        }
-
-        .header nav ul li a {
-            color: #333;
-            font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 4px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-        }
-
-        .header nav ul li a:hover {
-            background-color: #f1f1f1;
-            color: #000000;
-        }
-
         /* Основная секция */
         .main-section {
             background-color: #ffffff;
@@ -170,6 +134,41 @@
             font-size: 40px;
             color: #ff4c4c;
             margin-bottom: 10px;
+        }
+
+        /* Секция Промокоды */
+        .promo-section {
+            padding: 60px 5%;
+            background-color: #ff4c4c;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 80%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .promo-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .promo-button {
+            background-color: #ffffff;
+            color: #ff4c4c;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .promo-button:hover {
+            background-color: #f1f1f1;
+            transform: translateY(-3px);
         }
 
         /* Секция FAQ */
@@ -292,6 +291,10 @@
                 max-width: 100%;
             }
 
+            .promo-section {
+                max-width: 100%;
+            }
+
             .faq-item h3 {
                 font-size: 18px;
             }
@@ -308,17 +311,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-logo">Sky Shop</div>
-        <nav>
-            <ul>
-                <li><a href="https://skyrushop.ru/inst.html">Инструкции</a></li>
-                <li><a href="https://t.me/SkyRepChanel">Отзывы</a></li>
-                <li><a href="https://t.me/Poderzhkas">Поддержка</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <!-- Main Section -->
     <section class="main-section">
@@ -352,6 +344,12 @@
                 <p>Удобный интерфейс и приятный дизайн</p>
             </div>
         </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo-section">
+        <h2>Не пропустите наши промокоды!</h2>
+        <a href="https://skyrushop.ru/promo.html" class="promo-button">Промокоды</a>
     </section>
 
     <!-- FAQ Section -->
