@@ -101,7 +101,7 @@
             margin: 0 auto;
         }
 
-        .feature-item {
+        .feature-item, .promo-item {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 12px;
@@ -112,25 +112,26 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            position: relative;
         }
 
-        .feature-item h3 {
+        .feature-item h3, .promo-item h3 {
             font-size: 20px;
             color: #333;
             margin-bottom: 10px;
         }
 
-        .feature-item p {
+        .feature-item p, .promo-item p {
             font-size: 14px;
             color: #666666;
         }
 
-        .feature-item:hover {
+        .feature-item:hover, .promo-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-item .icon {
+        .feature-item .icon, .promo-item .icon {
             font-size: 40px;
             color: #ff4c4c;
             margin-bottom: 10px;
@@ -139,36 +140,47 @@
         /* Секция Промокоды */
         .promo-section {
             padding: 60px 5%;
-            background-color: #ff4c4c;
-            color: #ffffff;
-            text-align: center;
+            background-color: #f8f9fa;
+            text-align: left;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-radius: 12px;
-            margin: 40px auto;
-            max-width: 80%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .promo-section h2 {
             font-size: 36px;
-            margin-bottom: 20px;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .promo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .promo-button {
-            background-color: #ffffff;
-            color: #ff4c4c;
+            background-color: #ff4c4c;
+            color: #ffffff;
             padding: 15px 30px;
             font-size: 18px;
             border-radius: 25px;
             transition: background-color 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: -20px; /* Исправлено позиционирование */
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .promo-button:hover {
-            background-color: #f1f1f1;
-            transform: translateY(-3px);
+            background-color: #e03e3e;
+            transform: translateY(-3px) translateX(-50%);
         }
 
         /* Секция FAQ */
@@ -282,24 +294,24 @@
                 padding: 60px 5% 40px;
             }
 
-            .features-grid {
+            .features-grid, .promo-grid {
                 flex-direction: column;
                 gap: 30px;
             }
 
-            .feature-item {
+            .feature-item, .promo-item {
                 max-width: 100%;
             }
 
             .promo-section {
-                max-width: 100%;
+                text-align: center;
             }
 
             .faq-item h3 {
                 font-size: 18px;
             }
 
-            .faq-section h2, .features-section h2, .contact-section h2 {
+            .faq-section h2, .features-section h2, .contact-section h2, .promo-section h2 {
                 font-size: 28px;
             }
 
@@ -348,8 +360,15 @@
 
     <!-- Promo Section -->
     <section class="promo-section">
-        <h2>Не пропустите наши промокоды!</h2>
-        <a href="https://skyrushop.ru/promo.html" class="promo-button">Промокоды</a>
+        <h2>Промокоды</h2>
+        <div class="promo-grid">
+            <div class="promo-item">
+                <div class="icon">🎁</div>
+                <h3>Получите скидку</h3>
+                <p>Не упустите возможность сэкономить на покупках!</p>
+                <a href="https://skyrushop.ru/promo.html" class="promo-button">Промокоды</a>
+            </div>
+        </div>
     </section>
 
     <!-- FAQ Section -->
