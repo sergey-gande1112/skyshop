@@ -101,7 +101,7 @@
             margin: 0 auto;
         }
 
-        .feature-item, .promo-item {
+        .feature-item {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 12px;
@@ -112,75 +112,28 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            position: relative;
         }
 
-        .feature-item h3, .promo-item h3 {
+        .feature-item h3 {
             font-size: 20px;
             color: #333;
             margin-bottom: 10px;
         }
 
-        .feature-item p, .promo-item p {
+        .feature-item p {
             font-size: 14px;
             color: #666666;
         }
 
-        .feature-item:hover, .promo-item:hover {
+        .feature-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-item .icon, .promo-item .icon {
+        .feature-item .icon {
             font-size: 40px;
             color: #ff4c4c;
             margin-bottom: 10px;
-        }
-
-        /* Секция Промокоды */
-        .promo-section {
-            padding: 60px 5%;
-            background-color: #f8f9fa;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .promo-section h2 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 50px;
-        }
-
-        .promo-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .promo-button {
-            background-color: #ff4c4c;
-            color: #ffffff;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 25px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 100%;
-            position: absolute;
-            bottom: -20px; /* Исправлено позиционирование */
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .promo-button:hover {
-            background-color: #e03e3e;
-            transform: translateY(-3px) translateX(-50%);
         }
 
         /* Секция FAQ */
@@ -299,12 +252,17 @@
                 gap: 30px;
             }
 
-            .feature-item, .promo-item {
+            .feature-item {
                 max-width: 100%;
             }
 
             .promo-section {
-                text-align: center;
+                margin-top: 20px;
+                box-shadow: none;
+            }
+
+            .promo-button {
+                width: 100%;
             }
 
             .faq-item h3 {
@@ -355,18 +313,12 @@
                 <h3>Приятный в использовании сервис</h3>
                 <p>Удобный интерфейс и приятный дизайн</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Promo Section -->
-    <section class="promo-section">
-        <h2>Промокоды</h2>
-        <div class="promo-grid">
-            <div class="promo-item">
-                <div class="icon">🎁</div>
-                <h3>Получите скидку</h3>
-                <p>Не упустите возможность сэкономить на покупках!</p>
-                <a href="https://skyrushop.ru/promo.html" class="promo-button">Промокоды</a>
+            <div class="feature-item">
+                <a href="https://skyrushop.ru/promo.html">
+                    <div class="icon">🎁</div>
+                    <h3>Промокоды</h3>
+                    <p>Получите скидку на ваши покупки!</p>
+                </a>
             </div>
         </div>
     </section>
